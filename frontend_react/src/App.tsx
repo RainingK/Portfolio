@@ -1,10 +1,12 @@
 import './App.css';
+import { Navbar } from './components';
 import { About, Footer, Header, Skills, Testimonial, Work } from './containers';
 
 function App() {
 
 	return (
 		<div className='app'>
+			<Navbar />
 			<Header />
 			<About />
 			<Work />
