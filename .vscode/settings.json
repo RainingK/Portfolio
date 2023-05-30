@@ -1,0 +1,26 @@
+{
+	"files.exclude": {
+		"client/node_modules/": true,
+		"smart_contract/node_modules/": true,
+		"smart_contract/typechain-types/": true,
+		"smart_contract/cache/": true
+	},
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"files.eol": "\n",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+	"javascript.format.insertSpaceAfterConstructor": true,
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"files.insertFinalNewline": true,
+	"zenMode.centerLayout": false,
+	"zenMode.hideLineNumbers": false,
+	"zenMode.hideTabs": false,
+	"editor.find.addExtraSpaceOnTop": false,
+	"emmet.showSuggestionsAsSnippets": true,
+	"editor.formatOnSaveMode": "modifications",
+}
