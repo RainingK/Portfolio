@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { HiMenuAlt4, HiX } from 'react-icons/hi';
 
 import images from '../../constants/images';
 import './Navbar.scss';
