@@ -1,15 +1,25 @@
-import images from '../../constants/images';
-import './About.scss'
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { client, urlFor } from '../../client';
+import './About.scss';
 
-const abouts = [
-	{ title: 'Web Development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, quisquam.', imgUrl: images.about01 },
-	{ title: 'Web Design', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, quisquam.', imgUrl: images.about02 },
-	{ title: 'UI/UX', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, quisquam.', imgUrl: images.about03 },
-	{ title: 'Full stack', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, quisquam.', imgUrl: images.about04 },
-];
+interface IAbout {
+	imgUrl: string;
+	title: string;
+	description: string;
+}
 
 const About = () => {
+	const [abouts, setAbouts] = useState([] as IAbout[]);
+
+	useEffect(() => {
+		const query = '*[_type == "abouts"]';
+
+		client.fetch(query).then((data) => {
+			setAbouts(data);
+		});
+	}, [])
+
 	return (
 		<>
 			<h2 className='head-text'>
@@ -25,7 +35,7 @@ const About = () => {
 						className='app__profile-item'
 						key={about.title + index}
 					>
-						<img src={about.imgUrl} alt={about.title} />
+						<img src={urlFor(about.imgUrl).url()} alt={about.title} />
 						<h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
 						<p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
 					</motion.div>
