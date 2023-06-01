@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { client, urlFor } from '../../client';
 import './About.scss';
+import AppWrap from '../../wrapper/AppWrap';
 
 interface IAbout {
 	imgUrl: string;
@@ -45,4 +46,4 @@ const About = () => {
 	);
 }
 
-export default About;
+export default AppWrap(About, 'about', '');
