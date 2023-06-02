@@ -12,11 +12,6 @@ interface ISkill {
 	icon: any;
 }
 
-interface IExperience {
-	year: string;
-	works: [];
-}
-
 const Skills = () => {
 	const [experiences, setExperiences] = useState([] as any[]);
 	const [skills, setSkills] = useState([] as ISkill[]);
