@@ -1,9 +1,9 @@
-import './Work.scss'
-import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
-import AppWrap from '../../wrapper/AppWrap'
-import { urlFor, client } from '../../client'
 import { useEffect, useState } from 'react'
+import { AiFillEye, AiFillGithub } from 'react-icons/ai'
+import { client, urlFor } from '../../client'
+import AppWrap from '../../wrapper/AppWrap'
+import './Work.scss'
 
 interface IWorks {
 	imgUrl: string,
