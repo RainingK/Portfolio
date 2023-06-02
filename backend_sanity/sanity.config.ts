@@ -10,7 +10,7 @@ export default defineConfig({
   name: 'default',
   title: 'darkcyan-parrot',
 
-	projectId: `${process.env.SANITY_PROJECT_ID}`,
+	projectId: `${process.env.SANITY_STUDIO_PROJECT_ID}`,
   dataset: 'production',
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
